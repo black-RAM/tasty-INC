@@ -9,7 +9,7 @@ html{
     --green: forestgreen;
     --blue: midnightblue;
     --gray: hsl(0, 0%, 25%);
-    --light-gray: hsl(60, 5%, 65%);
+    --white-gray: hsl(60, 5%, 90%);
     --black: hsl(250, 29%, 10%);
     font-size: 62.5%;
 }
@@ -22,6 +22,8 @@ body{
 h1, h2, h3, h4, h5, h6, ul, li, ol{
     margin: 0px;
 }
+h1{ font-size: max(7rem, 9vw);}
+h2{ font-size: 3.5rem;}
 a{
     color: inherit;
     text-decoration: none;
@@ -30,6 +32,10 @@ a:focus {
     outline: solid 2px lightblue;
     padding: 1em;
 }
+p{
+    font-size: 1.6rem;
+    line-height: 1.5em;
+}
 /* resets end */
 /* utilitly classes */
 .grid-img{
@@ -37,9 +43,8 @@ a:focus {
     width: 100%;
     object-fit: cover
 }
-.text-size-normal{
-    font-size: 1.6rem;
-    line-height: 1.5em;
+.underline{
+    text-decoration: underline;
 }
 /* end of utilitly classes */
 .skip-to-main{
@@ -95,9 +100,8 @@ h1, h2, h3, h4{
 }
 .header-content h1{
     text-transform: uppercase;
-    font-size: max(7rem, 9vw);
     padding: 1rem;
-    box-shadow: -0.5em 0.25em var(--light-gray);
+    box-shadow: -0.5em 0.25em lightgray;
     margin-bottom: 0.8em;
     line-height: 1em;
 }
@@ -106,3 +110,37 @@ h1, h2, h3, h4{
     min-width: 14rem;
 }
 /* header end */
+
+/* introduction start (section 1) */
+.intro{
+    position: relative;
+    margin: 5rem 10% 4rem 34px;
+    width: 90vw;
+    padding-left: max(30px, 5vw);
+}
+.intro::before{
+    content: "";
+    position: absolute;
+    right: 0;
+    z-index: -1;
+    height: 100%;
+    max-height: 200px;
+    width: 50%;
+    min-width: 200px;
+    max-width: 360px;
+    background-color: var(--white-gray);
+}
+.intro::after{
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    background-color: var(--yellow);
+    height: 100%;
+    max-height: 220px;
+    width: 4px;
+}
+.intro h2{
+    text-transform: capitalize;
+}
+/* introdection end */
