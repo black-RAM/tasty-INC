@@ -6,8 +6,7 @@ html{
 }
 :root{
     --yellow: hsl(45, 90%, 50%);
-    --green: forestgreen;
-    --blue: midnightblue;
+    --dark-brown: hsl(12, 30%, 12%);
     --gray: hsl(0, 0%, 25%);
     --white-gray: hsl(60, 5%, 90%);
     --black: hsl(250, 29%, 10%);
@@ -49,6 +48,7 @@ p, a{
 /* end of utilitly classes */
 h1, h2, h3, h4{
     font-family: 'Oswald', Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    color: var(--dark-brown);
 }
 /* header start */
 .main-header{
@@ -59,7 +59,6 @@ h1, h2, h3, h4{
     max-height: 60rem;
     margin: 0 auto;
     overflow: hidden visible;
-    position: relative;
 }
 .main-header hr{
     grid-row: 1 / 1 ;
@@ -97,24 +96,12 @@ h1, h2, h3, h4{
     text-decoration-color: var(--yellow);
     color: gray;
 }
-.main-header::after{
-    content: "";
-    position: absolute;
-    z-index: 3;
-    grid-column-start: 6;
-    bottom: 0;
-    height: 100px;
-    min-width: 200px;
-    width: 20vw;
-    background-color: white;
-    clip-path: ellipse(50% 45% at 50% 100%);
-}
 /* header end */
 
 /* introduction start (section 1) */
 .intro{
     position: relative;
-    margin: 10rem 5vw 10rem 34px;
+    margin: 10rem 3vw 10rem 34px;
     padding-left: max(30px, 5vw);
 }
 .intro::before{
@@ -146,8 +133,7 @@ h1, h2, h3, h4{
 
 /* section 2 (img gallery) */
 .gallery{
-    width: 90vw;
-    margin: 0 auto;
+    margin: 0 calc(2% + 12px);
 }
 .gallery > .row{
     margin-bottom: 20px;
