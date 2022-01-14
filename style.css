@@ -57,11 +57,12 @@ h1, h2, h3, h4{
 .main-header{
     display: grid;
     grid-template-columns: repeat(10, 10vw);
-    grid-template-rows: 5% 95%;
+    grid-template-rows: 8% 92%;
     height: 100vh;
     max-height: 60rem;
     margin: 0 auto;
     overflow: hidden visible;
+    position: relative;
 }
 .main-header hr{
     grid-row: 1 / 1 ;
@@ -69,7 +70,6 @@ h1, h2, h3, h4{
     border: solid 3px var(--gray);
     height: 2px;
     width: 40vw;
-    align-self: start;
     margin: 40px 0px 10px 40px;
 }
 .main-header img{
@@ -98,13 +98,26 @@ h1, h2, h3, h4{
 }
 .header-content a {
     text-decoration-color: var(--yellow);
+    color: gray;
+}
+.main-header::after{
+    content: "";
+    position: absolute;
+    z-index: 3;
+    grid-column-start: 6;
+    bottom: 0;
+    height: 100px;
+    min-width: 200px;
+    width: 20vw;
+    background-color: white;
+    clip-path: ellipse(50% 45% at 50% 100%);
 }
 /* header end */
 
 /* introduction start (section 1) */
 .intro{
     position: relative;
-    margin: 10rem 5vw 4rem 34px;
+    margin: 10rem 5vw 10rem 34px;
     padding-left: max(30px, 5vw);
 }
 .intro::before{
