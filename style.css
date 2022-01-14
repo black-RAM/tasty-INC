@@ -46,9 +46,6 @@ p, a{
 .underline{
     text-decoration: underline;
 }
-.light{
-    font-weight: 300;
-}
 /* end of utilitly classes */
 h1, h2, h3, h4{
     font-family: 'Oswald', Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
@@ -146,3 +143,28 @@ h1, h2, h3, h4{
     text-transform: capitalize;
 }
 /* introdection end */
+
+/* section 2 (img gallery) */
+.gallery{
+    width: 90vw;
+    margin: 0 auto;
+}
+.gallery > .row{
+    margin-bottom: 20px;
+}
+.gallery > .row > .row {
+    flex: 1 1 fit-content;
+}
+.row{
+    display: flex;
+    flex-flow: row wrap;
+    gap: 20px;
+}
+.row>img{
+    height: auto;
+    width: 250px;
+    max-width: 100%;
+    object-fit: cover;
+    flex: 1;
+}
+/* section 2 end */
