@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,700;0,800;1,300;1,400&family=Oswald:wght@700&display=swap');
 *, *::before, *::after{
     box-sizing: border-box;
 }
@@ -18,11 +19,12 @@ body{
     margin: 0px;
 }
 /* resets */
-h1, h2, h3, h4, h5, h6, ul, li, ol{
+h1, h2, h3, blockquote, footer{
     margin: 0px;
 }
-h1{ font-size: max(7rem, 9vw);}
+h1{ font-size: clamp(7rem, 9vw, 10rem);}
 h2{ font-size: 4.5rem;}
+h3{ font-size: 3rem;}
 a{
     color: inherit;
     text-decoration: none;
@@ -204,3 +206,38 @@ h1, h2, h3, h4{
     flex-basis: 340px;
 }
 /* main sectins end */
+/* map section start */
+.map{
+    padding: 5rem calc(2vw + 2rem);
+    background-color: whitesmoke;
+    clip-path: polygon(0 0, 100% 0%, 100% calc(100% - 40px), 0% 100%);
+    margin-bottom: -40px;
+    text-align: center;
+}
+.map *{
+    margin-bottom: 20px;
+}
+/* map section end */
+/* testimonial start */
+.testimonial{
+    padding: 80px calc(2% + 15px);
+    text-align: right;
+    background-color: hsl(230, 20%, 92%);
+    font-size: 1.5rem;
+}
+.testimonial p{
+    font-size: 2rem;
+    line-height: 2em;
+    color: hsl(0, 0%, 20%);
+    word-break: break-all;
+    font-style: italic;
+}
+/* testimonial end */
+/* footer */
+footer{
+    background-color: hsl(240, 50%, 25%);
+    color: var(--white-gray);
+    font-size: 2rem;
+    text-align: center;
+    padding: 2rem;
+}
