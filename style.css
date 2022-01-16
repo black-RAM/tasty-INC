@@ -13,16 +13,18 @@ html{
     --black: hsl(250, 29%, 10%);
     font-size: 62.5%;
 }
-
+::selection{
+    background-color: hsla(195, 53%, 79%, 0.8);
+}
 body{
     font-family: 'Open Sans', Arial, Helvetica, sans-serif;
     margin: 0px;
 }
 /* resets */
-h1, h2, h3, blockquote, footer{
+h1, h2, h3, blockquote, footer, figure{
     margin: 0px;
 }
-h1{ font-size: clamp(7rem, 9vw, 10rem);}
+h1{ font-size: clamp(7rem, 9vmax, 12rem);}
 h2{ font-size: 4.5rem;}
 h3{ font-size: 3rem;}
 a{
@@ -38,6 +40,8 @@ p, a{
     line-height: 1.5em;
 }
 img{
+    height: 100%;
+    width: 100%;
     object-fit: cover;
 }
 /* resets end */
@@ -63,9 +67,7 @@ h1, h2, h3, h4{
     display: grid;
     grid-template-columns: repeat(10, 10vw);
     grid-template-rows: 8% 92%;
-    min-height: fit-content;
-    min-height: 100vh;
-    height: 60rem;
+    height: 100vh;
     margin: 0 auto;
     overflow: hidden visible;
 }
@@ -78,13 +80,13 @@ h1, h2, h3, h4{
     width: 40vw;
     margin: 40px 0px 10px 40px;
 }
-.main-header img{
+.main-header figure{
     grid-column: 5 / 11;
     grid-row: 1  / 3;
-    height: 100%;
-    width: 100%;
-    object-position: center;
     background-color: black;
+}
+.main-header figure img{
+    object-position: center;
 }
 .header-content{
     position: relative;
@@ -94,11 +96,14 @@ h1, h2, h3, h4{
     margin-top: 4rem;
     margin-left: 40px;
     background-color: hsla(0, 0%, 100%, 0.8);
+    /* align items to center */
+    display:flex;
+    flex-flow: column nowrap;
+    justify-content: center;
 }
 .header-content h1{
     position: relative;
-    padding: 1rem;
-    margin-bottom: 0.8em;
+    margin-bottom: 0.2em;
     line-height: 1em;
     color: hsl(12, 30%, 18%);
 }
@@ -167,7 +172,7 @@ h1, h2, h3, h4{
     flex-flow: row wrap;
     gap: 20px;
 }
-.row>img{
+.row>figure{
     height: auto;
     width: 25rem;
     max-width: 100%;
@@ -182,7 +187,7 @@ h1, h2, h3, h4{
     gap: 20px;
     background-color: snow;
 }
-.main-sect img{
+.main-sect figure{
     flex: 1 1 300px;
     height: 60rem;
     width: 100%;
@@ -212,7 +217,7 @@ h1, h2, h3, h4{
 .main-sect#main-sect-2 h2::after{
     inset: auto 0 0 auto;
 }
-.main-sect#main-sect-2 img{
+.main-sect#main-sect-2 figure{
     flex-basis: 340px;
 }
 /* main sectins end */
