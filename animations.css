@@ -18,9 +18,9 @@ figure{
 }
 img{
     transition-property: transform;
-    transition-duration: 1s;
+    transition-duration: 400ms;
     transition-timing-function: cubic-bezier(0.55, 0.09, 0.68, 0.53);
-    transition-delay: 400ms;
+    transition-delay: 200ms;
 }
 img:is(:hover, :active, :focus){
     transform: scale(1.1);
