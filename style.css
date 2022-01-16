@@ -64,8 +64,8 @@ h1, h2, h3, h4{
     grid-template-columns: repeat(10, 10vw);
     grid-template-rows: 8% 92%;
     min-height: fit-content;
-    height: 100vh;
-    max-height: 70rem;
+    min-height: 100vh;
+    height: 60rem;
     margin: 0 auto;
     overflow: hidden visible;
 }
@@ -95,11 +95,21 @@ h1, h2, h3, h4{
     background-color: hsla(0, 0%, 100%, 0.8);
 }
 .header-content h1{
+    position: relative;
     padding: 1rem;
-    box-shadow: -0.5em 0.25em lightgray;
     margin-bottom: 0.8em;
     line-height: 1em;
     color: hsl(12, 30%, 18%);
+}
+.header-content h1::before{
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: 1ex;
+    background-color: var(--yellow);
+    height: 2ex;
+    width: 2em;
+    filter: brightness(125%) saturate(150%);
 }
 .header-content p {
     margin-right: 20%;
@@ -143,7 +153,9 @@ h1, h2, h3, h4{
 
 /* section 2 (img gallery) */
 .gallery{
-    margin: 0 calc(2% + 12px);
+    width: fit-content;
+    margin: 0 auto;
+    padding: 0 calc(2% + 12px);
 }
 .gallery > .row{
     margin-bottom: 20px;
@@ -193,8 +205,7 @@ h1, h2, h3, h4{
     background-color: var(--yellow);
     height: 10rem;
     width: 20rem;
-    opacity: 0.6;
-    filter: brightness(120%) saturate(110%);
+    filter: brightness(125%) saturate(150%);
 }
 .main-sect#main-sect-1{
     margin-top: 5rem;
