@@ -153,9 +153,7 @@ h1, h2, h3, h4{
 
 /* section 2 (img gallery) */
 .gallery{
-    width: fit-content;
-    margin: 0 auto;
-    padding: 0 calc(2% + 12px);
+    margin: 0 calc(2% + 12px);
 }
 .gallery > .row{
     margin-bottom: 20px;
