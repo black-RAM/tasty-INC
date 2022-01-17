@@ -177,10 +177,8 @@ h1, h2, h3, h4{
     gap: 20px;
 }
 .row>figure{
-    height: auto;
-    width: 25rem;
     max-width: 100%;
-    flex: 1;
+    flex: 1 1 20rem;
 }
 /* section 2 end */
 /* main sections 3 & 4 */
