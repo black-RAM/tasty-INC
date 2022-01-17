@@ -1,6 +1,6 @@
 @media (prefers-reduced-motion: no-preference){
-    .header-content, figure{
-        overflow: hidden !important;
+    .header-content{
+        overflow-y: clip;
     }
     .header-content > *{
         animation-name: fadeUp;
@@ -18,6 +18,9 @@
             opacity: 1;
             transform: translateY(0);
         }
+    }
+    figure{
+        overflow: hidden !important;
     }
     img{
         transition-property: transform;
