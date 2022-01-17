@@ -10,6 +10,7 @@ html{
     --dark-brown: hsl(12, 30%, 12%);
     --gray: hsl(0, 0%, 25%);
     --white-gray: hsl(60, 5%, 90%);
+    --blue: hsl(240, 40%, 30%);
     --black: hsl(250, 29%, 10%);
     font-size: 62.5%;
 }
@@ -60,6 +61,10 @@ img:focus{
     text-decoration-color: var(--yellow);
     text-decoration-thickness: 4px;
     color: gray;
+    transition: color 400ms ease;
+}
+.readmore:is(:hover, :active){
+    color: var(--blue);
 }
 /* end of utilitly classes */
 h1, h2, h3, h4{
@@ -169,7 +174,7 @@ h1, h2, h3, h4{
     margin-bottom: 20px;
 }
 .gallery > .row > .row {
-    flex: 1 1 fit-content;
+    flex: 1 1 calc(40rem + 20px);
 }
 .row{
     display: flex;
