@@ -1,21 +1,21 @@
 @media (prefers-reduced-motion: no-preference){
+    .header-content, figure{
+        overflow: hidden !important;
+    }
     .header-content > *{
-        animation-name: fadeLeft;
+        animation-name: fadeUp;
         animation-duration: 4s;
         animation-timing-function: cubic-bezier(0.76, 0.05, 0.86, 0.06);
     }
-    @keyframes fadeLeft{
+    @keyframes fadeUp{
         from{
             opacity: 0.2;
-            transform: translateX(-40vw);
+            transform: translateY(80vh);
         }
         to{
             opacity: 1;
-            transform: translateX(0);
+            transform: translateY(0);
         }
-    }
-    figure{
-        overflow: hidden !important;
     }
     img{
         transition-property: transform;
