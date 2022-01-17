@@ -4,13 +4,15 @@
     }
     .header-content > *{
         animation-name: fadeUp;
-        animation-duration: 4s;
-        animation-timing-function: cubic-bezier(0.76, 0.05, 0.86, 0.06);
+        animation-duration: 1.5s;
+        animation-timing-function: ease-in-out;
+        animation-delay: 2000ms;
+        animation-fill-mode: forwards;
+        transform: translateY(75vh);
     }
     @keyframes fadeUp{
         from{
-            opacity: 0.2;
-            transform: translateY(80vh);
+            opacity: 0.5;
         }
         to{
             opacity: 1;
